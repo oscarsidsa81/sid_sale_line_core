@@ -17,7 +17,7 @@ class SaleOrderLine(models.Model):
 
     familia = fields.Char(
         string="Familia",
-        related="product_id.categ_id.name",
+        related="product_id.family.name",
         store=True,
         readonly=True,
     )
@@ -28,7 +28,7 @@ class SaleOrderLine(models.Model):
             ("invoiced", "Facturado"),
             ("no", "N/A"),
         ],
-        string="Pendiente FacturaciÃ³n",
+        string="Pendiente Facturación",
         compute="_compute_pending_invoice",
         store=True,
         readonly=True,
