@@ -6,7 +6,7 @@
     "summary": "Campos core y estados auxiliares en sale.order.line.",
     "author": "oscarsidsa81",
     "license": "LGPL-3",
-    "depends": ["sale", "sale_stock", "stock", "oct_fecha_contrato_ventas"],
+    "depends": ["sale", "sale_stock", "stock", "oct_fecha_contrato_ventas","oct_product_extra_fields"],
     "data": [],
     "installable": True,
     "application": False,
