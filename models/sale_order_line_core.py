@@ -7,14 +7,6 @@ class SaleOrderLine(models.Model):
 
     contractual_qty = fields.Float(string="Cantidad contractual")
 
-    sid_has_po_delay = fields.Boolean(
-        string="Retraso en compra",
-        store=True,
-        index=True,
-        readonly=False,
-        # si quieres permitir override manual, si no: readonly=True
-    )
-
     familia = fields.Char(
         string="Familia",
         related="product_id.family.name",

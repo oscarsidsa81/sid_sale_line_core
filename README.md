@@ -6,7 +6,6 @@ Módulo funcional que agrupa los **campos core** y **cómputos auxiliares** sobr
 Incluye:
 
 - `contractual_qty`
-- `sid_has_po_delay` (flag sincronizado desde compra)
 - `familia` (related a la categoría del producto)
 - `pending_invoice`, `pending_delivery` (compute/store)
 
@@ -15,10 +14,6 @@ Incluye:
 ### Cantidades contractuales
 - `contractual_qty`  
 Cantidad contractual asociada a la línea de venta.
-
-### Sincronización con compras
-- `sid_has_po_delay`  
-Flag booleano sincronizado desde compras que indica si la línea de venta tiene **retraso en alguna línea de compra vinculada**.
 
 ### Información del producto
 - `familia`  
