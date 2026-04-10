@@ -7,7 +7,9 @@
     "author": "oscarsidsa81",
     "license": "LGPL-3",
     "depends": ["sale", "sale_stock", "stock", "oct_fecha_contrato_ventas","oct_product_extra_fields"],
-    "data": [],
+    "data": [
+        "views/sale_order_line_core_search.xml",
+    ],
     "installable": True,
     "application": False,
 }

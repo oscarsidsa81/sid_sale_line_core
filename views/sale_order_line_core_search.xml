@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_sale_order_line_core_search_ov_autofiltro" model="ir.ui.view">
+            <field name="name">sid.sale.order.line.search.core.ov.autofiltro</field>
+            <field name="model">sale.order.line</field>
+            <field name="inherit_id" ref="sale.view_sales_order_line_filter"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//filter[@name='product_id']" position="after">
+                    <filter name="sid_familia" string="Familia" context="{'group_by': 'familia'}"/>
+                </xpath>
+
+                <xpath expr="//search" position="inside">
+                    <searchpanel>
+                        <field name="pending_invoice" string="Pendiente Facturación" enable_counters="1"
+                               select="multi"/>
+                        <field name="pending_delivery" string="Pendiente Entrega" enable_counters="1" select="multi"/>
+                    </searchpanel>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

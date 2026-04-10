@@ -5,7 +5,10 @@ from odoo.tools.float_utils import float_compare
 class SaleOrderLine(models.Model):
     _inherit = "sale.order.line"
 
-    contractual_qty = fields.Float(string="Cantidad contractual")
+    contractual_qty = fields.Float(string="Cantidad contractual",
+                                   help="Valor para reflejar la cantidad original",
+                                   store=True,
+    )
 
     familia = fields.Char(
         string="Familia",
